@@ -23,6 +23,7 @@
 
   {% include 'font-face' %}
   {{ 'theme.scss.css' | asset_url | stylesheet_tag }}
+  {{ 'custom-theme.css' | asset_url | stylesheet_tag }}
 
   <script>
     document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
@@ -63,7 +64,7 @@
 </head>
 
 <body class="template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}{% if settings.enable_currencies %} currencies-enabled{% endif %}" data-transitions="{{ settings.animate_page_transitions }}">
-
+  
   {% if settings.animate_page_transitions %}
     <script type="text/javascript">window.setTimeout(function() { document.body.className += " loaded"; }, 25);</script>
   {% endif %}
@@ -75,35 +76,35 @@
 
     {% section 'header' %}
 
-      <main class="main-content" id="MainContent">
-        {{ content_for_layout }}
-      </main>
+  {{content_for_layout}}
+  
+    </main>
 
-      {% section 'footer' %}
+    {% section 'footer' %}
 
-    </div>
   </div>
+</div>
 
-  {% section 'newsletter-popup' %}
+{% section 'newsletter-popup' %}
 
-  {% if settings.cart_type == 'drawer' %}
-    {% include 'ajax-cart-template' %}
-  {% endif %}
+{% if settings.cart_type == 'drawer' %}
+  {% include 'ajax-cart-template' %}
+{% endif %}
 
-  {% if settings.enable_currencies %}
-    <span
-      id="CurrencyData"
-      class="hide"
-      data-shop-currency="{{ shop.currency }}"
-      data-default-currency="{{ settings.default_currency | default: shop.currency }}"
-      data-format="{{ settings.currency_format | default: 'money_with_currency_format' }}"
-      data-money-format="{{ shop.money_format | strip_html }}"
-      data-money-currency-format="{{ shop.money_with_currency_format | strip_html }}">
-    </span>
-  {% endif %}
+{% if settings.enable_currencies %}
+  <span
+    id="CurrencyData"
+    class="hide"
+    data-shop-currency="{{ shop.currency }}"
+    data-default-currency="{{ settings.default_currency | default: shop.currency }}"
+    data-format="{{ settings.currency_format | default: 'money_with_currency_format' }}"
+    data-money-format="{{ shop.money_format | strip_html }}"
+    data-money-currency-format="{{ shop.money_with_currency_format | strip_html }}">
+  </span>
+{% endif %}
 
-  {% include 'qty-selector-template' %}
-  {% include 'video-modal' %}
-  {% include 'photoswipe-template' %}
+{% include 'qty-selector-template' %}
+{% include 'video-modal' %}
+{% include 'photoswipe-template' %}
 </body>
 </html>
