@@ -3,19 +3,18 @@
   the sections/ director.
 {% endcomment %}
 
-<body style="display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;">
-<div class="menu-button"><button>Look At Menu</button></div>
+<body>
   <div class="menu-block"></div>
   <div class="intro">
       <p class="intro-text">
           We’re Chicago’s
           Most Iconic Vegan 
           Bakery And We Bake
-          Everything With
-          Extra<br>Love.<img src="https://cdn.shopify.com/s/files/1/0441/1831/1070/files/white_heart.png?v=1612235352" class="heart"></p>
+          Everything With <br>
+          Extra Love.<img src="https://cdn.shopify.com/s/files/1/0441/1831/1070/files/white_heart.png?v=1612235352" class="heart"></p>
+          <div>
+              <img src="https://cdn.shopify.com/s/files/1/0441/1831/1070/files/doublechocolate.png?v=1605238727" class="intro-image">
+          </div>
           </div>
   </div>
   <div class="arrow-container">
@@ -23,40 +22,38 @@ align-items: center;">
           <div class="arrow-down"></div>
       </div>
   </div>
-  <!--
-  <div class="card-container">
-      <div class="card">
-          <img src="story.jpg" class="card-image">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis quo.</p>
-      </div>
-      <div class="card">
-          <img src="story.jpg" class="card-image">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis quo.</p>
-      </div>
-      <div class="card">
-          <img src="story.jpg" class="card-image">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis quo.</p>
-      </div>
-  </div>
-  -->
+<div class="text-block-container">
   <div class="text-block">
+
           <img src="https://cdn.shopify.com/s/files/1/0441/1831/1070/files/pie-store.jpg?v=1612235419" class="text-image">
+          
+          <div class="text">
           <h1>One Bakery,One Mission</h1>
           <p>Going vegan use to mean putting up with bland dessert. That's when I realized it didn't have to be this way! I started baking vegan treats that I really craved after that initial bite. And so I kept baking and baking... </p>
           <button class="white-text-block-button">Read More</button>
- </div>
+
+        </div>
+    </div>
+</div>
   <div class="cta-banner-container">
   <div class="cta-banner">
           <p>Tasty, vegan, and fresh.</p>
           <h1>It's time to pick</h1>
   </div>
   </div>
+<div class="text-block-container-2">
   <div class="text-block-2">
+
       <img src="https://cdn.shopify.com/s/files/1/0441/1831/1070/files/background-cakes2.png?v=1612235648" class="cakes">
+      
+      <div class="text-2">
       <h1>One Bakery,One Mission</h1>
       <p>Going vegan use to mean putting up with bland dessert. That's when I realized it didn't have to be this way! I started baking vegan treats that I really craved after that initial bite. And so I kept baking and baking... </p>
       <button class="black-text-block-button">Read More</button>
+
+      </div>
   </div>
+</div>
   <div class="logos">
       <h1 style="text-align: center; margin-top: 20px; margin-bottom: 30px; margin-left: 37px;">We're Popular</h1>
       <img src="https://cdn.shopify.com/s/files/1/0441/1831/1070/files/brands-final.png?v=1612235713" class="logos-image">
@@ -71,3 +68,89 @@ align-items: center;">
 </div>
 </body>
 {{ content_for_index }}
+
+<style>
+    @media screen and (min-width: 376px) {
+
+    .intro {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+    }
+
+    .intro-image {
+        width: 80%;
+        height: auto;
+        margin-top: 40px;
+        margin-right: 30px;
+    }
+
+    .intro-text {
+        font-size: 40px;
+        margin: 50px;
+        margin-right: 30px;
+    }
+
+    .text-block {
+        display: flex;
+        flex-direction: row;
+
+    }
+
+    .text-image {
+        width: 33%;
+        height: auto;
+        margin: 40px;
+    }
+
+    .text-block > h1 {
+        letter-spacing: 10px;
+        margin-left: 20px;
+        text-align: left;
+        width: 50%;
+    }
+
+    .text-block > p {
+        letter-spacing: 1.6;
+        margin-left: 20px;
+        text-align: left;
+        width: 50%;
+    }
+
+    .text-block-2 {
+        display: flex;
+        flex-direction: row-reverse;
+
+    }
+
+    .cakes {
+        width: 33%;
+        height: auto;
+        margin: 40px;
+    }
+
+    .text-block-2 > h1 {
+        letter-spacing: 10px;
+        margin-left: 20px;
+        text-align: left;
+        width: 50%;
+    }
+
+    .text-block-2 > p {
+        letter-spacing: 1.6;
+        margin-left: 20px;
+        text-align: left;
+        width: 50%;
+    }
+
+    .white-text-block-button {
+        margin: 20px;
+    }
+
+    .arrow-container, .arrow, .arrow-down {
+        display: none;
+    }
+}
+</style>

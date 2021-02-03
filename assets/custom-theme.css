@@ -12,14 +12,6 @@
     outline: none;
 }
 
-:root {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #1E1010;
-    background: lightblue;
-}
-
 h1, p {
     font-family: sans-serif;
     margin-top: 10px;
@@ -34,8 +26,8 @@ h1, p {
 
 h1 {
     font-family: 'Roboto', sans-serif;
-    letter-spacing: 1;
     line-height: 1.4;
+    letter-spacing: 1.6;
 }
 
 p {
@@ -48,16 +40,6 @@ p {
 
 a {
     text-decoration: underline;
-
-}
-
-body {
-    min-width: 375px;
-    max-width: 375px;
-    border: 1px solid lightcoral;
-    border-radius: 20px;
-    margin: 5px;
-    z-index: 1;
 }
 
 .menu-button {
@@ -260,7 +242,7 @@ body {
 
 .text-block-2 {
     display: flex;
-    flex-direction: column;
+    flex-direction: column !important;
     background-color: white;
     color: black;
     flex-direction: column;
@@ -541,3 +523,6 @@ body {
     backdrop-filter: blur(3px);
 }
 
+@media screen and (min-width: 480px) {
+
+}
