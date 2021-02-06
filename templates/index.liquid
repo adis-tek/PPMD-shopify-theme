@@ -10,9 +10,16 @@
           We’re Chicago’s
           Most Iconic Vegan 
           Bakery And We Bake
-          Everything With <br>
+          Everything <br>With
           Extra Love.<img src="https://cdn.shopify.com/s/files/1/0441/1831/1070/files/white_heart.png?v=1612235352" class="heart"></p>
-          <div>
+        <p class="intro-text-2">
+            We’re Chicago’s
+            Most Iconic Vegan 
+            Bakery <br>And We Bake
+            Everything With
+            Extra Love.<img src="https://cdn.shopify.com/s/files/1/0441/1831/1070/files/white_heart.png?v=1612235352" class="heart"></p>
+        </p>
+          <div class="intro-image-container">
               <img src="https://cdn.shopify.com/s/files/1/0441/1831/1070/files/doublechocolate.png?v=1605238727" class="intro-image">
           </div>
           </div>
@@ -56,7 +63,7 @@
   </div>
 </div>
   <div class="logos">
-      <div class="logo-heading-contnainer">
+      <div class="logo-heading-container">
       <h1 class="logo-heading">FEATURED ON</h1>
       </div>
       <div class="logo-image-container">
@@ -81,6 +88,11 @@
 
 <style>
     @media screen and (max-width: 375px) {
+
+        .intro-text-2 {
+            display: none;
+        }
+
         .cta-image-vertical {
             display: none;
         }
@@ -103,6 +115,10 @@
         justify-content: center;
     }
 
+    .intro-text-2 {
+    display: none;
+}
+
     .intro-image {
         width: 300px;
         height: auto;
@@ -124,18 +140,18 @@
         justify-content: center;
         padding-top: 60px;
         padding-bottom: 60px;
-        padding-left: 5px;
-        padding-right: 5px;
+        padding-left: 0px;
+        padding-right: 0px;
     }
 
     .text-image {
         width: 80%;
         height: auto;
-        margin: 20px;
+        margin: 0px;
     }
 
     .text {
-        width: 75%;
+        width: 85%;
     }
 
     .text > h1 {
@@ -172,8 +188,8 @@
         flex-direction: column;
         padding-top: 15px;
         padding-bottom: 15px;
-        padding-left: 5px;
-        padding-right: 5px;
+        padding-left: 0px;
+        padding-right: 0px;
     }
 
     .cakes {
@@ -189,14 +205,8 @@
 
     }
 
-    .text-image {
-        width: 70%;
-        height: auto;
-        margin: 20px;
-    }
-
     .text-2 {
-        width: 75%;
+        width: 85%;
     }
 
     .text-2 > h1 {
@@ -246,8 +256,8 @@
         margin: 25px;
     }
 
-    .arrow-container, .arrow, .arrow-down {
-        display: none;
+    .arrow-container, .arrow {
+        padding-top: 40px;
     }
 
     .logos {
@@ -285,6 +295,69 @@
     }
 }
 
+@media screen and (min-width: 825px) and (max-width: 1179px) {
+
+    .intro {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 250px;
+
+    }
+
+    .intro-text {
+        display: none;
+    }
+
+    .intro-text-2 {
+        font-size: 40px;
+        padding-right: 0px;
+        width: 500px;
+        height: auto;
+        padding-bottom: 40px;
+    }
+
+
+    .intro-image {
+        width: 500px;
+        height: auto;
+    }
+
+    .arrow {
+        padding-top: 50px;
+        padding-bottom: 100px;
+    }
+
+    .cakes-2 {
+        display: none;
+    }
+
+    .logos-image-vertical {
+        display: none;
+    }
+
+    .logo-heading {
+        padding-bottom: 10px;
+    }
+
+    .logos-image-horizontal {
+        padding-bottom: 25px;
+    }
+
+    .cta-image-vertical {
+        display: none;
+    }
+
+    .cta-container {
+        padding-top: 0px;
+    }
+
+    .cta-message {
+        width: 60%;
+    }
+}
+
 @media screen and (min-width: 1180px) {
 
 .intro {
@@ -293,6 +366,10 @@
     align-items: center;
     align-content: center;
     justify-content: center;
+}
+
+.intro-text-2 {
+    display: none;
 }
 
 .intro-image {
@@ -336,7 +413,6 @@
     text-align: left;
     letter-spacing: 1.6;
     width: 500px;
-    margin-left: 20px;
 
 }
 
