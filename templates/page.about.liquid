@@ -9,10 +9,11 @@
     </div>
     <img src="https://cdn.shopify.com/s/files/1/0441/1831/1070/files/cake-slice.png?v=1612239557" class="image-block-1">
 </div>
-<div class="cta-banner-container">
-    <div class="cta-banner">
-        <p>Vegans deserve delicious treats too</p>
-        <h1>It's time to pick</h1>
+<div class="about-founder-container">
+    <div class="about-founder">
+        <img class="about-image" src="https://cdn.shopify.com/s/files/1/0441/1831/1070/files/circular-face-heather-light.png?v=1612825387">
+        <p>Heather Bodine-Lederman</p>
+        <p class="about-founder-text">We put a great deal of effort in baking these delicious cakes.</p>
     </div>
 </div>
 <div class="about-block-2">
@@ -22,10 +23,13 @@
     </div>
     <img src="https://cdn.shopify.com/s/files/1/0441/1831/1070/files/window.jpg?v=1612417189" class="image-block-2">
 </div>
-<div class="cta-banner-container">
-    <div class="cta-banner">
-        <p>Vegans deserve delicious treats too</p>
-        <h1>It's time to pick</h1>
+<div class="about-founder-container">
+    <div class="about-founder">
+        <img class="about-image" src="https://cdn.shopify.com/s/files/1/0441/1831/1070/files/circular-face-chris.png?v=1612834022">
+        <p>Christopher Andrews</p>
+    </div>
+    <div class="about-founder-text">
+        <p>We put a great deal of effort in baking these delicious cakes.</p>
     </div>
 </div>
 <div class="about-block-3">
@@ -37,6 +41,55 @@
 </div>
 
 <style>
+
+    h1, p {
+        margin: 5px;
+        padding: 2.5px;
+    }
+
+    .about-founder-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(251, 248, 245);
+        width: 100%;
+        height: 600px;
+    }
+
+    .about-founder {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: rgb(48, 48, 48);
+        font-size: 25px;
+        font-weight: 600;
+        padding-top: 15px;
+        margin-top: 20px;
+        margin-bottom: 200px;
+    }
+
+    .about-founder-text {
+        color: rgb(48, 48, 48);
+        font-size: 25px;
+        font-weight: 500;
+        width: 70%;
+        margin-top: 15px;
+        padding-bottom: 10px;
+    }
+
+    .about-image {
+        width: 175px;
+        height: auto;
+
+    }
+
+    @media screen and (max-width: 376px) {
+
+    }
+
     @media screen and (min-width: 376px) {
     .about-block-1 {
         display: flex;
@@ -59,6 +112,16 @@
         flex-direction: column;
         width: 500px;
         margin: 40px;
+    }
+
+    .about-founder-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(251, 248, 245);
+        width: 100%;
+        height: 300px;
     }
 
     .image-block-1, .image-block-2 {
