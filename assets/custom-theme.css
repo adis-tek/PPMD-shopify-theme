@@ -518,10 +518,6 @@ a {
     background-color: rgb(255, 226, 182);
 }
 
-.about-block-1 > h1 {
-    margin-top: 120px;
-}
-
 .image-block-1 {
     width: 75%;
 }
@@ -559,7 +555,7 @@ a {
 }
 
 .image-block-3 {
-    width: 75%;
+    width: 55%;
 }
 
 .glass {

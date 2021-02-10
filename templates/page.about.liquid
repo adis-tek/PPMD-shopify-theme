@@ -4,8 +4,9 @@
 
 <div class="about-block-1">
     <div class="text-about">
-    <h1>Dessert but vegan.</h1>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto quisquam quidem minus nihil, hic illum rem quam, ex repellat inventore quod fugit numquam cumque saepe? Iste, ratione illo? Perferendis, quas.</p>
+    <h1 class="about-heading">"Vegan Dessert"</h1>
+    <p class="about-paragraph">When I first went vegan I quickly found out how unappealing the "non-dairy" desserts were. They tasted dry, heavy, and dense (but not in a good way). For vegan desserts they really tasted <i>vegan</i>.</p>
+    <p class="about-paragraph">When I first went vegan I quickly found out how unappealing the "non-dairy" desserts were. They tasted dry, heavy, and dense (but not in a good way). For vegan desserts they really tasted <i>vegan</i>.</p>
     </div>
     <img src="https://cdn.shopify.com/s/files/1/0441/1831/1070/files/cake-slice.png?v=1612239557" class="image-block-1">
 </div>
@@ -13,29 +14,28 @@
     <div class="about-founder">
         <img class="about-image" src="https://cdn.shopify.com/s/files/1/0441/1831/1070/files/circular-face-heather-light.png?v=1612825387">
         <p>Heather Bodine-Lederman</p>
-        <p class="about-founder-text">We put a great deal of effort in baking these delicious cakes.</p>
+        <p class="about-founder-text">For a girl like me with the world's biggest sweet tooth, this just wouldn't do. I had to take matters into my own hands. So I started baking -- and baking and baking! I baked till my oven pleaded for mercy and over fed my friends, co-workers, and boyfriend until he said "Heather, there are too many desserts in this house so please get rid of them -- maybe even sell them."</p>
+        <p class="about-founder-text">And that's what I did!</p>
     </div>
 </div>
 <div class="about-block-2">
     <div class="text-about">
-    <h1>Headline.</h1>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto quisquam quidem minus nihil, hic illum rem quam, ex repellat inventore quod fugit numquam cumque saepe? Iste, ratione illo? Perferendis, quas.</p>
+    <h1 class="about-heading">Small Beginnings</h1>
+    <p class="about-paragraph">In 2014 I bought a table at a local vegan market, came up with a name based off of my favorite Misfits song, and baked a ton of treats. For six years I've been hopping from one shared kitchen to another racing to bake as much as I could bring to these pop-ups and local markets -- it really was a blast even without a proper shop. Baking saved me from my previous addictions and mental problems that used to plague my life but now it all seems to have dissappeared.</p>
     </div>
     <img src="https://cdn.shopify.com/s/files/1/0441/1831/1070/files/window.jpg?v=1612417189" class="image-block-2">
 </div>
 <div class="about-founder-container">
     <div class="about-founder">
         <img class="about-image" src="https://cdn.shopify.com/s/files/1/0441/1831/1070/files/circular-face-chris.png?v=1612834022">
-        <p>Christopher Andrews</p>
-    </div>
-    <div class="about-founder-text">
-        <p>We put a great deal of effort in baking these delicious cakes.</p>
+        <p>Christopher Andrews </p>
+        <p class="about-founder-text">"We put a great deal of effort in baking these delicious cakes."</p>
     </div>
 </div>
 <div class="about-block-3">
     <div class="text-about">
-    <h1>Headline.</h1>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto quisquam quidem minus nihil, hic illum rem quam, ex repellat inventore quod fugit numquam cumque saepe? Iste, ratione illo? Perferendis, quas.</p>
+    <h1 class="about-heading">Thank You All</h1>
+    <p class="about-paragraph">It's been six year since then and now that I have a real, live shop and kitchen I've been able to grow more than I thought I would -- and I'm so thankful the people that have helped me get to where I am and the customers that we've baked goodies for! Without any one of you I don't think we would have become what we are today -- a true vegan bakery that stands up for what's right.</p>
     </div>
     <img src="https://cdn.shopify.com/s/files/1/0441/1831/1070/files/specials.jpeg?v=1612417227" class="image-block-3">
 </div>
@@ -47,6 +47,11 @@
         padding: 2.5px;
     }
 
+    p {
+        
+        text-align: left;
+    }
+
     .about-founder-container {
         display: flex;
         flex-direction: column;
@@ -54,8 +59,13 @@
         justify-content: center;
         background-color: rgba(251, 248, 245);
         width: 100%;
-        height: 600px;
+        height: 800px;
     }
+
+    .about-block-1, .about-block-2, .about-block-3 {
+        height: 800px;
+    }
+
 
     .about-founder {
         display: flex;
@@ -64,18 +74,18 @@
         justify-content: center;
         text-align: center;
         color: rgb(48, 48, 48);
-        font-size: 25px;
+        font-size: 20px;
         font-weight: 600;
-        padding-top: 15px;
-        margin-top: 20px;
-        margin-bottom: 200px;
+        padding-top: 30px;
+        padding-bottom: 20px;
+        margin-bottom: 0px;
     }
 
     .about-founder-text {
         color: rgb(48, 48, 48);
-        font-size: 25px;
+        font-size: 16px;
         font-weight: 500;
-        width: 70%;
+        width: 80%;
         margin-top: 15px;
         padding-bottom: 10px;
     }
@@ -83,10 +93,35 @@
     .about-image {
         width: 175px;
         height: auto;
+        margin-bottom: 15px;
+    }
 
+    .about-heading {
+        font-size: 30px;
+        font-weight: 500;
+        padding-top: 0;
+        margin-bottom: 20px;
+    }
+
+    .about-paragraph {
+        font-size: 24px;
+        margin-bottom: 25px;
     }
 
     @media screen and (max-width: 376px) {
+        .text-about {
+            width: 90%;
+        }
+
+        .about-heading {
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+
+    .about-paragraph {
+        font-size: 16px;
+        margin-bottom: 25px;
+    }
 
     }
 
