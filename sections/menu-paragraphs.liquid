@@ -1,0 +1,31 @@
+<div>
+    {% for paragraph in section.settings %}
+    <p>{{ paragraph.textarea }}</p>
+    {% endif %}
+</div>
+
+{% schema %}
+{
+    "name" : "Menu Descripion",
+    "class" : "menu-paragraphs-section",
+    "settings" : [
+    {
+        "id" : "title",
+        "type" : "text",
+        "label" : "Section Title",
+        "default" : "Default"
+    }
+],
+"blocks" : [
+    {
+        "name" : "Paragraphs",
+        "type" : "menu-description",
+        "settings" : [
+        {
+            "id" : "paragraph",
+            "type" : "textarea",
+            "label" : "Write Your Paragraph"
+        }]
+    }]
+}
+{% endschema %}
