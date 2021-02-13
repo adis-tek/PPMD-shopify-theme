@@ -1,7 +1,9 @@
-<div>
-    {% for paragraph in section.settings %}
-    <p>{{ paragraph.textarea }}</p>
-    {% endif %}
+<div class="page-width">
+{% for writing in section.blocks %}
+    <div>
+    <p>{{ writing.settings.paragraph }}</p>
+    </div>
+{% endfor %}
 </div>
 
 {% schema %}
@@ -25,7 +27,9 @@
             "id" : "paragraph",
             "type" : "textarea",
             "label" : "Write Your Paragraph"
-        }]
-    }]
+        }
+        ]
+    }
+    ]
 }
 {% endschema %}
