@@ -1,0 +1,56 @@
+<div>
+    {% for home in section.blocks %}
+    <div class="text-block-container-2">
+        <div class="text-block-2">
+            {% if home.settings.photo %}
+                <img src="{{ home.settings.photo | img_url: 'large' }}" class="cakes">
+                <img src="{{ home.settings.photo | img_url: 'large' }}" class="cakes-2">
+            {% endif %}
+            <div class="text-2">
+                <h1>{{ home.settings.heading }}</h1>
+                <p>{{ home.settings.paragraph }}</p>
+                <button class="black-text-block-button">Read More</button>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+
+{% schema %}
+{
+    "name" : "Home Blocks",
+    "class" : "home-blocks",
+    "settings" : [
+    {
+        "id" : "title",
+        "type" : "text",
+        "label" : "Section Title",
+        "default" : "Default"
+    }
+],
+"blocks" : [
+    {
+        "name" : "Paragraphs",
+        "type" : "menu-description",
+        "settings" : [
+        {
+            "id" : "photo",
+            "type" : "image_picker",
+            "label" : "Photo"
+        },
+        {
+            "id" : "heading",
+            "type" : "text",
+            "label" : "Write your heading"
+        },
+        {
+            "id" : "paragraph",
+            "type" : "richtext",
+            "label" : "Write Your Paragraph"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
