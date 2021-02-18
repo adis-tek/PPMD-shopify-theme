@@ -139,13 +139,18 @@ a {
     padding-bottom: 50px;
 }
 
-.intro-text {
+.intro-heading {
     padding-top: 50px;
+}
+
+.intro-text {
+    padding-top: 0px;
+    margin-top: 0px;
     padding-bottom: 40px;
     padding-left: 30px;
     line-height: 50px;
     width: 80%;
-    font-size: 21px;
+    font-size: 22px;
 }
 
 .intro-image-container {
@@ -163,10 +168,10 @@ a {
 .heart {
     margin-top: -5px;
     position: relative;
-    min-width: 41px;
-    max-width: 41px;
-    min-height: 41px;
-    max-height: 41px;
+    min-width: 40px;
+    max-width: 40px;
+    min-height: 40px;
+    max-height: 40px;
     top: 10px;
 }
 
@@ -274,7 +279,7 @@ a {
     font-weight: 700;
     letter-spacing: 1.4;
     margin-top: 25px;
-    margin-left: 25px;
+    margin-left: 30px;
 }
 
 .black-text-block-button {
@@ -289,7 +294,7 @@ a {
     font-weight: 700;
     letter-spacing: 1.4;
     margin-top: 25px;
-    margin-left: 25px;
+    margin-left: 30px;
 }
 
 .text-block {
@@ -347,8 +352,6 @@ a {
     flex-direction: column;
     background-color: white;
     color: black;
-    align-items: center;
-    justify-content: center;
 }
 
 .text-block-2 > h1 {
@@ -438,8 +441,8 @@ a {
 @media screen and (max-width: 375px) {
 
     .intro-text {
-        margin-top: 25px;
-        font-size: 24px;
+        margin-top: 15px;
+        font-size: 22px;
     }
 
     .intro-text-2 {
@@ -529,12 +532,6 @@ display: none;
     text-align: left;
 }
 
-.white-text-block-button {
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-bottom: 20px;
-}
-
 .cta-banner-container {
     height: 250px;
 }
@@ -586,7 +583,7 @@ display: none;
 
 .black-text-block-button {
     margin-top: 20px;
-    margin-left: 20px;
+    margin-left: 30px;
     margin-bottom: 20px;
 }
 
@@ -823,10 +820,8 @@ padding-top: 40px;
 }
 
 .text-block-2 > h1 {
-letter-spacing: 10px;
-margin-left: 20px;
+letter-spacing: normal;
 text-align: left;
-width: 500px;
 }
 
 .text-2 > p {
@@ -836,12 +831,11 @@ text-align: left;
 width: 500px;
 }
 
-.white-text-block-button {
-margin: 20px;
-}
-
 .black-text-block-button {
-margin: 20px;
+margin-top: 20px;
+margin-left: 30px;
+margin-right: 20px;
+margin-bottom: 20px;
 }
 
 
@@ -898,6 +892,18 @@ display: none;
 
 /* MENU PAGE */
 
+.text-block-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-heading {
+    width: 85%;
+    text-align: left;
+}
+
 .chip-container {
     display: flex;
     flex-direction: column;
@@ -946,21 +952,6 @@ display: none;
     background: rgba(255,216,158,1);
 }
 
-.cta-menu-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-}
-
-.cta-menu {
-    display: flex;
-    flex-direction: column;
-}
-
-
-
 .glass-block {
     display: flex;
     flex-direction: column;
@@ -972,11 +963,31 @@ display: none;
     border-radius: 50px;
     margin-top: 40px;
     padding: 20px;
+    z-index: 200;
+}
+
+.glass-block > h1 {
+    width: 80%;
+    margin-top: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 10px;
+    padding: 0px;
+}
+
+.glass-block > p {
+    width: 80%;
+    margin-top: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 10px;
+    padding: 0px;
 }
 
 .chip, .sprinkles, .oreos, .doublechocolate, .rainbow, .pretzel {
     width: 100%;
     margin-top: -70px;
+    z-index: 1;
 }
 
 .cta-cakes {
@@ -985,16 +996,6 @@ display: none;
     align-self: center;
     background-color: rgba(255, 216, 158);
     margin-top: -40px;
-}
-
-.cta-button {
-    width: 200px;
-    height: 50px;
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-bottom: 50px;
-    background-color: black;
-    color: white;
 }
 
 .cta-banner-container {
@@ -1028,6 +1029,53 @@ display: none;
     font-weight: 500;
 }
 
+.cta-menu-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
+.cta-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.cta-menu > h1 {
+    width: 80%;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 0px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.cta-menu > p {
+    width: 80%;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 0px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.cta-button {
+    width: 80%;
+    height: 55px;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-right: 0px;
+    margin-bottom: 50px;
+    background-color: black;
+    color: white;
+}
+
 @media screen and (min-width: 500px) {
     .glass-block {
         width: 60%;
@@ -1035,11 +1083,25 @@ display: none;
 
     .glass-block > h1 {
         font-size: 35px;
+        width: 80%;
+        margin-top: 12.5px;
+        margin-right: 12.5px;
+        margin-left: 12.5px;
+        margin-bottom: 0px;
+        padding: 0px;
     }
 
     .glass-block > p {
         font-size: 25px;
+        width: 80%;
+        margin-top: 12.5px;
+        margin-right: 12.5px;
+        margin-left: 12.5px;
+        margin-bottom: 12.5px;
+        padding: 0px;
     }
+
+
 }
 
 @media screen and (min-width: 760px) {
@@ -1058,6 +1120,8 @@ display: none;
 
 @media screen and (min-width: 1179px) {
 
+
+
     .text-block-2 {
         display: flex;
         flex-direction: column;
@@ -1066,9 +1130,12 @@ display: none;
         align-items: center;
         justify-content: center;
     }
-    
-    .menu-heading {
-        text-align: center;
+
+    .glass-block {
+        width: 50%;
+        margin: 100px;
+        padding: 15px;
+        padding-bottom: 5px;
     }
 
     /* CHIP */
@@ -1076,14 +1143,7 @@ display: none;
         display: flex;
         flex-direction: row-reverse;
         align-items: none;
-        justify-content: space-between;
-    }
-
-    .glass-block {
-        width: 70%;
-        margin: 15px;
-        padding: 15px;
-        padding-bottom: 5px;
+        justify-content: space-around;
     }
 
     .chip-image-container {
@@ -1101,14 +1161,7 @@ display: none;
         display: flex;
         flex-direction: row;
         align-items: none;
-        justify-content: space-between;
-    }
-
-    .glass-block {
-        width: 70%;
-        margin: 15px;
-        padding: 15px;
-        padding-bottom: 5px;
+        justify-content: space-around;
     }
 
     .sprinkles-image-container {
@@ -1126,14 +1179,7 @@ display: none;
         display: flex;
         flex-direction: row-reverse;
         align-items: none;
-        justify-content: space-between;
-    }
-
-    .glass-block {
-        width: 70%;
-        margin: 15px;
-        padding: 15px;
-        padding-bottom: 5px;
+        justify-content: space-around;
     }
 
     .oreos-image-container {
@@ -1151,14 +1197,7 @@ display: none;
         display: flex;
         flex-direction: row;
         align-items: none;
-        justify-content: space-between;
-    }
-
-    .glass-block {
-        width: 70%;
-        margin: 15px;
-        padding: 15px;
-        padding-bottom: 5px;
+        justify-content: space-around;
     }
 
     .doublechocolate-image-container {
@@ -1176,14 +1215,7 @@ display: none;
         display: flex;
         flex-direction: row-reverse;
         align-items: none;
-        justify-content: space-between;
-    }
-
-    .glass-block {
-        width: 70%;
-        margin: 15px;
-        padding: 15px;
-        padding-bottom: 5px;
+        justify-content: space-around;
     }
 
     .rainbow-image-container {
@@ -1201,14 +1233,7 @@ display: none;
         display: flex;
         flex-direction: row;
         align-items: none;
-        justify-content: space-between;
-    }
-
-    .glass-block {
-        width: 70%;
-        margin: 15px;
-        padding: 15px;
-        padding-bottom: 5px;
+        justify-content: space-around;
     }
 
     .pretzel-image-container {
@@ -1230,21 +1255,42 @@ display: none;
         width: 90%;
     }
 
-    .cta-button {
-        align-self: start;
-    }
-
     .cta-cakes {
         width: 90%;
     }
 
 }
 
+@media screen and (min-width: 1376px) {
+
+.menu-heading {
+    width: 1165px;
+}
+
+}
 /* Seasonal Menu Component */
 
 .section-container {
     padding-top: 30px;
     padding-bottom: 30px;
+}
+
+.seasonal-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.seasonal-section > h1 {
+    width: 80%;
+    margin-top: 10px;
+}
+
+.seasonal-section > p {
+    width: 80%;
+    margin-top: 10px;
 }
 
 .seasonal-container {
@@ -1269,6 +1315,7 @@ display: none;
 }
 
 .seasonal-text {
+    width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1277,7 +1324,9 @@ display: none;
 
 .heading-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .seasonal-heading {
