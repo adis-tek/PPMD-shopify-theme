@@ -1,21 +1,19 @@
-<div>
-    <div class="seasonal-container">
+    <div class="container">
         {% for menu in section.blocks %}
-    <div class="seasonal-image-container">
-        {% if menu.settings.photo %}
-        <img class="seasonal-image" src="{{ menu.settings.photo | img_url: 'large' }}" alt="Seasonal treat">
-        {% endif %}
-    </div>
-    <div class="seasonal-text">
-        <div class="heading-container">
-        <h1 class="seasonal-heading">{{ menu.settings.heading }}</h1>
+        <div class="seasonal-container">
+        <div class="seasonal-image-container">
+            {% if menu.settings.photo %}
+            <img class="seasonal-image" src="{{ menu.settings.photo | img_url: 'large' }}" alt="Seasonal treat">
+            {% endif %}
         </div>
-        <div class="paragraph-container">
-        <p class="seasonal-paragraph">{{ menu.settings.paragraph }}</p>
+        <div class="seasonal-text">
+            <h1 class="seasonal-heading">{{ menu.settings.heading }}</h1>
+            <p class="seasonal-paragraph">{{ menu.settings.paragraph }}</p>
         </div>
 </div>
 {% endfor %}
 </div>
+
 
 <style>
 
@@ -30,7 +28,7 @@
 
     p {
         padding: 0px;
-        margin-top: 5px;
+        margin-top: 0px;
         margin-left: 0px;
         margin-right: 0px;
         margin-bottom: 0px;

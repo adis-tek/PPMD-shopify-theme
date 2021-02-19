@@ -4,27 +4,23 @@
 {% endcomment %}
 
 <body>
+<div class="index-container">
 <div class="menu-button-container">
     <div class="menu-button">
-        <p class="menu-button-text">See Menu</p>
+        <a class="see-menu" href="https://adis-test.myshopify.com/pages/menu"><p class="menu-button-text">See Menu</p></a>
     </div>
 </div>
   <div class="intro">
+    <div class="intro-text-container">
       <h1 class="intro-heading">Fresh Vegan Sweet Treats Made From Scratch.</h1>
       <p class="intro-text">
           We’re a small Chicago bakery that makes guilt-free treats and support impactful charities<img src="https://cdn.shopify.com/s/files/1/0441/1831/1070/files/white_heart.png?v=1612235352" class="heart"></p>
-        <p class="intro-text-2">
-            We’re Chicago’s
-            Most Iconic Vegan 
-            Bakery <br>And We Bake
-            Everything With
-            Extra Love.<img src="https://cdn.shopify.com/s/files/1/0441/1831/1070/files/white_heart.png?v=1612235352" class="heart"></p>
-        </p>
+      </div>
           <div class="intro-image-container">
               <img src="https://cdn.shopify.com/s/files/1/0441/1831/1070/files/doublechocolate.png?v=1605238727" class="intro-image">
           </div>
-          </div>
-  </div>
+      </div>
+</div>
   <div class="arrow-container">
       <div class="arrow">
           <div class="arrow-down"></div>
@@ -39,8 +35,7 @@
           <h1>We Want to Make a Difference</h1>
           <p>When I became vegan I was pretty upset when I realized how much of dessert was laden in dairy and eggs. I decided to try baking my own treats and now we're spreading vegan goodies to everyone in Chicago.</p>
           <button class="white-text-block-button">Read More</button>
-
-        </div>
+          </div>
     </div>
 </div>
 <div class="logos">
@@ -67,14 +62,17 @@
 
   </div>
 </div>
-<div class="cta-banner-container">
+
+<!-- <div class="cta-banner-container">
     <div class="cta-banner">
             <p>Tasty, vegan, and fresh.</p>
             <h1>It's time to pick</h1>
     </div>
     </div>
+-->
 
     {% section 'blog-posts' %}
+    {% section 'text-and-image' %}
 
   <div class="cta-container">
       <div class="cta-message">
@@ -91,6 +89,7 @@
   <div>
     {% section 'homepage-blocks' %}
   </div>
+</div>
 </body>
 {{ content_for_index }}
 

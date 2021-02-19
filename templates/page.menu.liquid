@@ -1,6 +1,6 @@
 {{ 'theme.scss.css' | asset_url | stylesheet_tag }}
 {{ 'custom-theme.css' | asset_url | stylesheet_tag }}
-
+<div class="menu-page-container">
 <div class="text-block-2">
     <img src="menu-home.png" class="cakes">
     <h1 class="menu-heading">Cake Menu</h1>
@@ -61,10 +61,12 @@
     <img src="https://cdn.shopify.com/s/files/1/0441/1831/1070/files/pretzels.png?v=1605238727" class="pretzel">
     </div>
 </div>
-<div class="seasonal-section">
-    <h1>Seasonal Menu</h1>
-    <p>We offer seasonal treats for a limited time each new season just to switch it up a bit. Get them while they last!</p>
-    {% section 'seasonal-menu' %}
+<div class="seasonal-section-container">
+    <div class="seasonal-section">
+        <h1>Seasonal Menu</h1>
+        <p>We offer seasonal treats for a limited time each new season just to switch it up a bit. Get them while they last!</p>
+        {% section 'seasonal-menu' %}
+    </div>
 </div>
 <div class="cta-banner-container">
     <div class="cta-banner">
@@ -79,6 +81,7 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis voluptatem cupiditate nemo, reprehenderit quam quaerat, minima error quia hic nihil aspernatur mollitia in, libero illum animi sint odio atque delectus.</p>
     </div>
     <button class="cta-button">ORDER NOW</button>
+</div>
 </div>
 
 
