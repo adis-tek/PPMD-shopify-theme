@@ -1,6 +1,6 @@
 {% if section.settings.divider %}<div class="section--divider">{% endif %}
 
-<div class="page-width">
+<div class="text-and-image-container">
   {% capture image_layout %}
     <div class="feature-row__item">
       <div style="margin: 0 auto; max-width: {{ section.settings.image_width }}px;">
@@ -32,13 +32,13 @@
 
     <div class="feature-row__item feature-row__text feature-row__text--{{ section.settings.layout }} larger-text">
       {% if section.settings.subtitle != blank %}
-        <p class="subtitle">{{ section.settings.subtitle }}</p>
+        <p style="margin: 0px; padding: 0px;" class="subtitle">{{ section.settings.subtitle }}</p>
       {% endif %}
       {% if section.settings.title != blank %}
         <h2 class="h3">{{ section.settings.title | escape }}</h2>
       {% endif %}
       {% if section.settings.text != blank %}
-        <div class="rte featured-row__subtext">{{ section.settings.text }}</div>
+        <div style="margin: 0px; padding: 0px;" class="rte featured-row__subtext">{{ section.settings.text }}</div>
       {% endif %}
       {% if section.settings.button_label != blank %}
         <a href="{{ section.settings.button_link }}" class="btn">
@@ -56,10 +56,31 @@
 {% if section.settings.divider %}</div>{% endif %}
 
 <style>
-  p {
-    margin-left: 0px;
-    padding-left: 0px;
-  }
+
+.index-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-and-image-container {
+  width: 65%;
+  margin: 0px;
+  padding: 0px;
+}
+
+.rte > p {
+    margin: 0px;
+    padding: 0px;
+}
+
+.featured-row__subtext > p {
+  margin: 0px;
+  padding: 0px;
+}
+
+
 </style>
 
 {% schema %}
